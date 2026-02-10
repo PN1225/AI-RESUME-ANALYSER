@@ -7,14 +7,7 @@ import subprocess
 import sys
 
 def load_spacy_model():
-    try:
-        return spacy.load("en_core_web_sm")
-    except OSError:
-        subprocess.check_call(
-            [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
-        )
-        return spacy.load("en_core_web_sm")
-
+    return spacy.load("en_core_web_sm")
 
 
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
