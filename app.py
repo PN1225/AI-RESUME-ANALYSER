@@ -3,8 +3,6 @@ import spacy
 import pdfplumber
 import docx
 import re
-import subprocess
-import sys
 
 def load_spacy_model():
     return spacy.load("en_core_web_sm")
